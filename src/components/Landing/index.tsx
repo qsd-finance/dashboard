@@ -145,12 +145,12 @@ export const Landing: React.FC = () => {
           <Button style={{ marginRight: 40 }}>
             <a
               style={{ textDecoration: 'none' }}
-              href='https://qsd-docs.vercel.app/faqs/frequently-asked-questions'
+              href='https://docs.quantumset.finance/faqs/frequently-asked-questions'
             >
               Read the FAQ
             </a>
           </Button>
-          <LinkBase href='https://qsd-docs.vercel.app/'>
+          <LinkBase href='https://docs.quantumset.finance/'>
             Look at the documentation
           </LinkBase>
         </div>

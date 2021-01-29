@@ -174,6 +174,8 @@ function HomePage({ user }: HomePageProps) {
               action={
                 <Button>
                   <a
+                    target='_blank'
+                    rel="noopener noreferrer" 
                     style={{ textDecoration: 'none' }}
                     href={`https://app.uniswap.org/#/swap?outputCurrency=${QSD.addr}`}
                   >
@@ -188,6 +190,8 @@ function HomePage({ user }: HomePageProps) {
               action={
                 <Button>
                   <a
+                    target='_blank'
+                    rel="noopener noreferrer" 
                     style={{ textDecoration: 'none' }}
                     href={`https://info.uniswap.org/token/${QSD.addr}`}
                   >
@@ -202,6 +206,8 @@ function HomePage({ user }: HomePageProps) {
               action={
                 <Button>
                   <a
+                    target='_blank'
+                    rel="noopener noreferrer" 
                     style={{ textDecoration: 'none' }}
                     href={`https://app.uniswap.org/#/add/${QSD.addr}/0x6b175474e89094c44da98b954eedeac495271d0f`}
                   >
@@ -231,7 +237,7 @@ function HomePage({ user }: HomePageProps) {
               action={
                 <NavLink
                   component={Button}
-                  to={curEpoch < 72 ? '/dao' : '/bonding'}
+                  to={curEpoch < 72 ? '/bootstrapping' : '/qsd'}
                   {...{ external: false }}
                 >
                   Add QSD

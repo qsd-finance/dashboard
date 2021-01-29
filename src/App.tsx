@@ -91,10 +91,10 @@ function App() {
                   <div style={{ padding: '0 0 80px' }}>
                     {hasWeb3 ? (
                       <Switch>
-                        <Route path='/dao/:override'>
+                        <Route path='/bootstrapping/:override'>
                           <Wallet user={user} />
                         </Route>
-                        <Route path='/dao/'>
+                        <Route path='/bootstrapping/'>
                           <Wallet user={user} />
                         </Route>
                         <Route path='/epoch/'>
@@ -124,10 +124,10 @@ function App() {
                         <Route path='/lp/'>
                           <Pool user={user} />
                         </Route>
-                        <Route path='/bonding/'>
+                        <Route path='/qsd/'>
                           <Bonding user={user} />
                         </Route>
-                        <Route path='/gov-pool/'>
+                        <Route path='/qsg/'>
                           <PoolGov user={user} />
                         </Route>
                         <Route path='/dashboard/'>
