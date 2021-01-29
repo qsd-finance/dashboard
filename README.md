@@ -23,12 +23,13 @@ npm start
 
 ## contracts
 ### mainnet
-- `0x443D2f2755DB5942601fa062Cc248aAA153313D3` **DAO**
-- `0x7d72243247aedb0D1D35787A2942107dD76338d8` **Implementation**
-- `0x36F3FD68E7325a35EB768F1AedaAe9EA0689d723` **Døllar**
-- `0xea9f8bb8B5e8BA3D38628f0E18Ee82300eddBa0E` **Oracle**
-- `0x88ff79eB2Bc5850F27315415da8685282C7610F9` **UniswapV2 USDC:ESD Pair**
-- `0xdF0Ae5504A48ab9f913F8490fBef1b9333A68e68` **LP Incentivation Pool**
+- `0xEc9dCB3DC47FF5edc02666cE4Db459841853B7B4` **Root / Bootstrapping rewards**
+- `0x9B1B24EB741B435074D8e8c21D62DAeF12b5733d` **Implementation**
+- `0x35b4EBBb9bD9d967B1EFE4ccDDCe38F22E38198c` **QSD**
+- `0x9f54B1E1122AE6978A70fdE254CA95Ae6Df35459` **QSG**
+- `0xD9122DB4cB0E1c42dA965Ee5D25606C7ef607145` **QSG Rewards**
+- `0xDBAf2265C74AD30a90B08D14E8097D13B891a2cF` **LP Rewards**
+- `0xCd72c0A874782d7D5c85208c1bbAE46c409478dd` **QSD Rewards**
 
 ## disclaimer
 this project is an experiment, and its contracts are unaudited - we've put a significant amount of work into testing, as well as generally de-risking the design of its core mechanism, however participants should take great caution as bugs resulting in loss of funds are always a possibility.
