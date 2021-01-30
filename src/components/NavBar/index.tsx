@@ -121,7 +121,7 @@ function NavBar({ hasWeb3, user, setUser }: NavbarProps) {
               <LinkButton title='Tools' to='/tools/' />
               <ExternalButton
                 title='Docs'
-                href='https://qsd-docs.vercel.app/'
+                href='https://docs.quantumset.finance/'
               />
             </div>
             <ConnectButton hasWeb3={hasWeb3} user={user} setUser={setUser} />
