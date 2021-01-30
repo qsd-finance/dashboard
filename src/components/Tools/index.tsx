@@ -325,8 +325,15 @@ function Tools({ user }: { user: string }) {
 
     const lpYield = (daiToAdd / totalDAI) * 100;
 
-    lpExpansionYield = Intl.NumberFormat().format(lpYield) + '%';
-    lpAPR = Intl.NumberFormat().format(lpYield * 6 * 365) + '%';
+    lpExpansionYield =
+      Intl.NumberFormat('en', {
+        maximumFractionDigits: 0,
+        minimumFractionDigits: 0,
+      }).format(lpYield) + '%';
+    lpAPR = Intl.NumberFormat('en', {
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0,
+    }).format(lpYield * 6 * 365) + '%';
   }
 
   // Calculate DAO APR (4 hrs)
@@ -336,8 +343,14 @@ function Tools({ user }: { user: string }) {
 
     const daoYield = (qsdToAdd / totalQSD) * 100;
 
-    daoExpansionYield = Intl.NumberFormat().format(daoYield) + '%';
-    daoAPR = Intl.NumberFormat().format(daoYield * 6 * 365) + '%';
+    daoExpansionYield = Intl.NumberFormat('en', {
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0,
+    }).format(daoYield) + '%';
+    daoAPR = Intl.NumberFormat('en', {
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0,
+    }).format(daoYield * 6 * 365) + '%';
   }
 
   if (qsdPrice && qsdBondedLiquidity)
@@ -396,7 +409,7 @@ function Tools({ user }: { user: string }) {
           }
           line3={
             expansionAmount && expansionAmount > 0
-              ? `Yielding ${lpExpansionYield} on LPd QSD (${lpAPR} APR) and ${daoExpansionYield} to QSD stakers(${daoAPR} APR)`
+              ? `Yielding ${lpExpansionYield} on LP TVL (${lpAPR} APR) and ${daoExpansionYield} to Bonded QSD (${daoAPR} APR)`
               : 'QSG will be allocated to QSD stakers'
           }
         />

@@ -137,7 +137,7 @@ function PoolGov({ user }: { user: string }) {
             <br />
             Step 2. Stage your QSG into the Governance Pool
             <br />
-            Step 3. Bond your QSD into the Governance Pool
+            Step 3. Bond your QSG into the Governance Pool
             <br />
             &nbsp;&nbsp; Note: If you'd like to submit a proposal your QSG needs
             to remain bonded

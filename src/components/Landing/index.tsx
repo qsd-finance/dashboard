@@ -84,6 +84,8 @@ export const Landing: React.FC = () => {
               }}
             >
               <a
+                target='_blank'
+                rel="noopener noreferrer"
                 href='https://discord.gg/au3CmE6gtd'
                 style={{ textDecoration: 'none' }}
               >
@@ -94,7 +96,7 @@ export const Landing: React.FC = () => {
         </div>
 
         <img
-          src='./about/hero.png'
+          src='./about/lp.png'
           alt='Quantum Set Dollar Hero'
           style={{
             zIndex: 1,
@@ -138,12 +140,14 @@ export const Landing: React.FC = () => {
           <Card
             underlineTitle={true}
             title='Community Ownership'
-            body='Quantum Set Dollar will be governed by holders of the Quantum Set Governance Token. QSG can be farmed by community members from Epoch 72 onwards, whilst QSD is below the peg of $1. QSG holders will also control the Treasury.'
+            body='Quantum Set Dollar will be governed by holders of the Quantum Set Governance Token. QSG can be farmed by community members from Epoch 73 onwards, whilst QSD is below the peg of $1. QSG holders will also control the Treasury.'
           />
         </div>
         <div style={{ textAlign: 'center', marginTop: 24 }}>
           <Button style={{ marginRight: 40 }}>
             <a
+              target='_blank'
+              rel="noopener noreferrer"
               style={{ textDecoration: 'none' }}
               href='https://docs.quantumset.finance/faqs/frequently-asked-questions'
             >
