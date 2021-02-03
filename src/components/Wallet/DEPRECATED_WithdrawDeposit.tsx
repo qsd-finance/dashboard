@@ -51,7 +51,7 @@ function WithdrawDeposit({
                 suffix={'QSD'}
               />
             </div>
-            {/* Deposit Døllar into DAO */}
+            {/* Deposit QSD into DAO */}
             <div style={{ flexBasis: '33%', paddingTop: '2%' }}>
               <div style={{ display: 'flex' }}>
                 <div style={{ width: '60%', minWidth: '6em' }}>
@@ -90,7 +90,7 @@ function WithdrawDeposit({
               </div>
             </div>
             <div style={{ flexBasis: '2%' }} />
-            {/* Withdraw Døllar from DAO */}
+            {/* Withdraw QSD from DAO */}
             <div style={{ flexBasis: '33%', paddingTop: '2%' }}>
               <div style={{ display: 'flex' }}>
                 <div style={{ width: '60%', minWidth: '7em' }}>
@@ -140,7 +140,7 @@ function WithdrawDeposit({
               />
             </div>
             <div style={{ flexBasis: '35%' }} />
-            {/* Approve DAO to spend Døllar */}
+            {/* Approve DAO to spend QSD */}
             <div style={{ flexBasis: '33%', paddingTop: '2%' }}>
               <Button
                 wide

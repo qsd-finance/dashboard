@@ -41,7 +41,7 @@ function BondUnbond({ staged, bonded, status, lockup }: BondUnbondProps) {
             }
           />
         </div>
-        {/* Bond Døllar within DAO */}
+        {/* Bond QSD within DAO */}
         <div style={{ flexBasis: '33%', paddingTop: '2%' }}>
           <div style={{ display: 'flex' }}>
             <div style={{ width: '60%', minWidth: '6em' }}>
@@ -76,7 +76,7 @@ function BondUnbond({ staged, bonded, status, lockup }: BondUnbondProps) {
           </div>
         </div>
         <div style={{ width: '2%' }} />
-        {/* Unbond Døllar within DAO */}
+        {/* Unbond QSD within DAO */}
         <div style={{ flexBasis: '33%', paddingTop: '2%' }}>
           <div style={{ display: 'flex' }}>
             <div style={{ width: '60%', minWidth: '6em' }}>

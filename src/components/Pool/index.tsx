@@ -194,15 +194,20 @@ function Pool({ user }: { user: string }) {
   let lpDailyAPR = '...';
   let lpWeeklyAPR = '...';
 
+  // Define number formatting
+  var options = { minimumFractionDigits: 0,
+                maximumFractionDigits: 2 };
+  var numberFormat = new Intl.NumberFormat('en-US', options);
+
   if (qsdPrice && qsdLiquidity && daiLiquidity && expansionAmount) {
     const totalDAI = qsdLiquidity * toFloat(qsdPrice) + daiLiquidity;
     const daiToAdd = (expansionAmount / 2) * toFloat(qsdPrice);
 
     const lpYield = (daiToAdd / totalDAI) * 100;
 
-    lpHourlyAPR = Intl.NumberFormat().format(lpYield / 4) + '%';
-    lpDailyAPR = Intl.NumberFormat().format(lpYield * 6) + '%';
-    lpWeeklyAPR = Intl.NumberFormat().format(lpYield * 6 * 7) + '%';
+    lpHourlyAPR = numberFormat.format(lpYield / 4) + '%';
+    lpDailyAPR = numberFormat.format(lpYield * 6) + '%';
+    lpWeeklyAPR = numberFormat.format(lpYield * 6 * 7) + '%';
   }
 
   return (

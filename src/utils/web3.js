@@ -190,7 +190,7 @@ export const removeLiquidity = async (
 };
 
 /**
- * Døllar Protocol
+ * QSD Protocol
  */
 
 export const advance = async (dao) => {

@@ -177,6 +177,11 @@ function Bonding({ user }: { user: string }) {
   let bondingHourlyYield = '...';
   let bondingDailyYield = '...';
 
+  // Define number formatting
+  var options = { minimumFractionDigits: 0,
+                maximumFractionDigits: 2 };
+  var numberFormat = new Intl.NumberFormat('en-US', options);
+
   // Calculate DAO APR (4 hrs)
   if (qsdPrice && totalBonded && expansionAmount) {
     if (epoch > 72) {
@@ -185,9 +190,9 @@ function Bonding({ user }: { user: string }) {
 
       const daoYield = (qsdToAdd / totalQSD) * 100;
 
-      bondingHourlyYield = Intl.NumberFormat().format(daoYield / 4) + '%';
-      bondingDailyYield = Intl.NumberFormat().format(daoYield * 6) + '%';
-      bondingWeeklyYield = Intl.NumberFormat().format(daoYield * 6 * 7) + '%';
+      bondingHourlyYield = numberFormat.format(daoYield / 4) + '%';
+      bondingDailyYield = numberFormat.format(daoYield * 6) + '%';
+      bondingWeeklyYield = numberFormat.format(daoYield * 6 * 7) + '%';
     } else {
       bondingHourlyYield = '0%';
       bondingDailyYield = '0%';
@@ -211,8 +216,10 @@ function Bonding({ user }: { user: string }) {
           weekly: bondingWeeklyYield,
         }}
         bodyInstructions={
-          <p>
-            Note: Rewards in this section are applicable from epoch 73 onwards.
+            <p>
+              <p style={{ color: 'red' }}>            
+              <b><u>WARNING:</u> Rewards in this section are only available post-bootstrapping, please do not stage/bond in this section until epoch 73</b></p>
+
             <br />
             Step 1: Stage your QSD
             <br />

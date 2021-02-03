@@ -249,72 +249,77 @@ function Tools({ user }: { user: string }) {
 
   let treasuryUSDValue = '$0';
 
+  // Define number formatting
+  var options = { minimumFractionDigits: 0,
+                maximumFractionDigits: 2 };
+  var numberFormat = new Intl.NumberFormat('en-US', options);
+
   // Calculate prices
   if (qsdPrice && treasuryQSDAmount) {
     const totalDAI = toFloat(treasuryQSDAmount) * toFloat(qsdPrice);
 
-    treasuryUSDValue = '$' + Intl.NumberFormat().format(totalDAI);
+    treasuryUSDValue = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && qsdStagedLiquidity && daiStagedLiquidity) {
     const totalDAI =
       qsdStagedLiquidity * toFloat(qsdPrice) + daiStagedLiquidity;
-    lpStagedPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    lpStagedPrice = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && qsdBondedLiquidity && daiBondedLiquidity) {
     const totalDAI =
       qsdBondedLiquidity * toFloat(qsdPrice) + daiBondedLiquidity;
-    lpBondedPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    lpBondedPrice = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && daoBonded) {
     const totalDAI = toFloat(daoBonded) * toFloat(qsdPrice);
-    qsdBondedPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    qsdBondedPrice = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && daoStaged) {
     const totalDAI = toFloat(daoStaged) * toFloat(qsdPrice);
-    qsdStagedPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    qsdStagedPrice = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && userQsdWalletLiquidity && userDaiWalletLiquidity) {
     const totalDAI =
       userQsdWalletLiquidity * toFloat(qsdPrice) + userDaiWalletLiquidity;
 
-    userLPWalletPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    userLPWalletPrice = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && userQsdStagedLiquidity && userDaiStagedLiquidity) {
     const totalDAI =
       userQsdStagedLiquidity * toFloat(qsdPrice) + userDaiStagedLiquidity;
 
-    userLPStagedPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    userLPStagedPrice = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && userQsdBondedLiquidity && userDaiBondedLiquidity) {
     const totalDAI =
       userQsdBondedLiquidity * toFloat(qsdPrice) + userDaiBondedLiquidity;
 
-    userLPBondedPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    userLPBondedPrice = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && userQsdBal) {
     const totalDAI = toFloat(userQsdBal) * toFloat(qsdPrice);
 
-    userQSDWalletPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    userQSDWalletPrice = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && userDaoBonded) {
     const totalDAI = toFloat(userDaoBonded) * toFloat(qsdPrice);
 
-    userQSDBondedPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    userQSDBondedPrice = '$' + numberFormat.format(totalDAI);
   }
 
   if (qsdPrice && userDaoStaged) {
     const totalDAI = toFloat(userDaoStaged) * toFloat(qsdPrice);
 
-    userQSDStagedPrice = '$' + Intl.NumberFormat().format(totalDAI);
+    userQSDStagedPrice = '$' + numberFormat.format(totalDAI);
   }
 
   // Calculate LP APR (4 hrs)

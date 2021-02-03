@@ -94,7 +94,7 @@ function PurchaseCoupons({
             <BalanceBlock asset={`Døllar Balance`} balance={balance}/>
           </div>
           <div style={{flexBasis: '40%'}}/>
-          {/* Approve DAO to spend Døllar */}
+          {/* Approve DAO to spend QSD */}
           <div style={{flexBasis: '30%', paddingTop: '2%'}}>
             <Button
               wide

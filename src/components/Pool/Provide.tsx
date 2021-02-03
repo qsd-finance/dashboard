@@ -142,7 +142,7 @@ function Provide({
                     poolAddress === '' ||
                     status !== 0 ||
                     !isPos(provideAmount) ||
-                    usdcAmount.isGreaterThan(userDAIBalance)
+                    provideAmount.isGreaterThan(rewarded)
                   }
                 />
               </div>

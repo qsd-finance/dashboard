@@ -64,7 +64,7 @@ function UniswapPool({ user }: {user: string}) {
         <div style={{ flexBasis: '30%' }}>
           <MainButton
             title="Trade"
-            description="Trade døllar tokens."
+            description="Trade QSD tokens."
             icon={<i className="fas fa-exchange-alt"/>}
             href={"https://uniswap.exchange/swap?inputCurrency=0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48&outputCurrency=0x36f3fd68e7325a35eb768f1aedaae9ea0689d723"}
           />

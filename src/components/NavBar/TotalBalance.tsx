@@ -16,14 +16,16 @@ type TotalBalanceProps = {
 }
 
 function TotalBalance({ user }: TotalBalanceProps) {
+  // const [totalBalance, setTotalBalance] = useState(new BigNumber(0));
+
   const [totalBalance, setTotalBalance] = useState(new BigNumber(0));
 
   //Update User balances
   useEffect(() => {
-    if (user === '') {
-      setTotalBalance(new BigNumber(0));
-      return;
-    }
+    // if (user === '') {
+    //   setTotalBalance(new BigNumber(0));
+    //   return;
+    // }
     let isCancelled = false;
 
     async function updateUserInfo() {
@@ -48,15 +50,15 @@ function TotalBalance({ user }: TotalBalanceProps) {
         getPoolBalanceOfClaimable(poolAddress, user),
       ]);
 
-      const userBalance = toTokenUnitsBN(new BigNumber(esdBalance), QSD.decimals);
-      const userStagedBalance = toTokenUnitsBN(new BigNumber(stagedBalance), QSDS.decimals);
-      const userBondedBalance = toTokenUnitsBN(new BigNumber(bondedBalance), QSDS.decimals);
+      const userBalance = toTokenUnitsBN(esdBalance, QSD.decimals);
+      const userStagedBalance = toTokenUnitsBN(stagedBalance, QSDS.decimals);
+      const userBondedBalance = toTokenUnitsBN(bondedBalance, QSDS.decimals);
 
-      const userUNIBalance = toTokenUnitsBN(new BigNumber(userUNIBalanceStr), QSDS.decimals);
-      const userPoolBondedBalance = toTokenUnitsBN(new BigNumber(userPoolBondedBalanceStr), QSDS.decimals);
-      const userPoolStagedBalance = toTokenUnitsBN(new BigNumber(userPoolStagedBalanceStr), QSDS.decimals);
-      const userPoolRewardedBalance = toTokenUnitsBN(new BigNumber(userPoolRewardedBalanceStr), QSDS.decimals);
-      const userPoolClaimableBalance = toTokenUnitsBN(new BigNumber(userPoolClaimableBalanceStr), QSDS.decimals);
+      const userUNIBalance = toTokenUnitsBN(userUNIBalanceStr, QSDS.decimals);
+      const userPoolBondedBalance = toTokenUnitsBN(userPoolBondedBalanceStr, QSDS.decimals);
+      const userPoolStagedBalance = toTokenUnitsBN(userPoolStagedBalanceStr, QSDS.decimals);
+      const userPoolRewardedBalance = toTokenUnitsBN(userPoolRewardedBalanceStr, QSDS.decimals);
+      const userPoolClaimableBalance = toTokenUnitsBN(userPoolClaimableBalanceStr, QSDS.decimals);
 
       const UNItoQSD = new BigNumber(pairBalanceQSDStr).dividedBy(new BigNumber(pairTotalSupplyUNIStr));
 
@@ -84,7 +86,7 @@ function TotalBalance({ user }: TotalBalanceProps) {
 
   return (
     <div style={{ fontSize: 14, padding: 3, fontWeight: 400, lineHeight: 1.5, fontFamily: 'aragon-ui-monospace, monospace'}}>
-      ∅{formatBN(totalBalance, 2)}
+      ${formatBN(totalBalance, 2)}
     </div>
   );
 }

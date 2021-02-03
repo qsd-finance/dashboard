@@ -103,6 +103,11 @@ function HomePage({ user }: HomePageProps) {
   let lpHourlyYield = '...';
   let lpDailyYield = '...';
 
+  // Define number formatting
+  var options = { minimumFractionDigits: 0,
+                maximumFractionDigits: 2 };
+  var numberFormat = new Intl.NumberFormat('en-US', options);
+
   // Calculate LP APR (4 hrs)
   if (qsdPrice && lpQsdLiquidity && lpDaiLiquidity && expansionAmount) {
     const totalDAI = lpQsdLiquidity * toFloat(qsdPrice) + lpDaiLiquidity;
@@ -110,9 +115,9 @@ function HomePage({ user }: HomePageProps) {
 
     const lpYield = (daiToAdd / totalDAI) * 100;
 
-    lpHourlyYield = Intl.NumberFormat().format(lpYield / 4) + '%';
-    lpDailyYield = Intl.NumberFormat().format(lpYield * 6) + '%';
-    lpWeeklyYield = Intl.NumberFormat().format(lpYield * 6 * 7) + '%';
+    lpHourlyYield = numberFormat.format(lpYield / 4) + '%';
+    lpDailyYield = numberFormat.format(lpYield * 6) + '%';
+    lpWeeklyYield = numberFormat.format(lpYield * 6 * 7) + '%';
   }
 
   // Calculate DAO APR (4 hrs)
@@ -122,9 +127,9 @@ function HomePage({ user }: HomePageProps) {
 
     const daoYield = (qsdToAdd / totalQSD) * 100;
 
-    daoHourlyYield = Intl.NumberFormat().format(daoYield / 4) + '%';
-    daoDailyYield = Intl.NumberFormat().format(daoYield * 6) + '%';
-    daoWeeklyYield = Intl.NumberFormat().format(daoYield * 6 * 7) + '%';
+    daoHourlyYield = numberFormat.format(daoYield / 4) + '%';
+    daoDailyYield = numberFormat.format(daoYield * 6) + '%';
+    daoWeeklyYield = numberFormat.format(daoYield * 6 * 7) + '%';
   }
 
   const curEpoch = Number(epochTime.split('-')[0]);

@@ -1,10 +1,10 @@
-# døllar dashboard
-simple dashboard for interacting with the døllar protocol.
+# QSD dashboard
+simple dashboard for interacting with the QSD protocol.
 
 forked from [Opyn Monitor](https://opynmonitor.xyz).
 
 ## ipfs
-for convenience, the current IPFS build of døllar dashboard can be accessed here: [https://emptyset.finance](https://emptyset.finance)
+for convenience, the current IPFS build of QSD dashboard can be accessed here: [https://quantumset.finance](https://quantumset.finance)
 
 ## screenshot
 ![image](screenshot.png)
@@ -14,8 +14,8 @@ for convenience, the current IPFS build of døllar dashboard can be accessed her
 
 ## install & run locally
 ```shell
-git clone git@github.com:emptysetsquad/dollar-dashboard.git
-cd dollar-dashboard
+git clone https://github.com/qsd-finance/dashboard.git
+cd dashboard
 npm install
 
 npm start
@@ -35,7 +35,7 @@ npm start
 this project is an experiment, and its contracts are unaudited - we've put a significant amount of work into testing, as well as generally de-risking the design of its core mechanism, however participants should take great caution as bugs resulting in loss of funds are always a possibility.
 
 ```
-Copyright 2020 Empty Set Squad <emptysetsquad@protonmail.com>
+Copyright 2021 Quantum Set Team <quantumsetteam@protonmail.com>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use the included code except in compliance with the License.
@@ -51,4 +51,3 @@ limitations under the License.
 ```
 
 <br>
-made with 💔️ by the {ess}.

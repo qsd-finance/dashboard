@@ -149,6 +149,11 @@ function Wallet({ user }: { user: string }) {
   let daoHourlyYield = '...';
   let daoDailyYield = '...';
 
+  // Define number formatting
+  var options = { minimumFractionDigits: 0,
+                maximumFractionDigits: 2 };
+  var numberFormat = new Intl.NumberFormat('en-US', options);
+
   // Calculate DAO APR (4 hrs)
   if (qsdPrice && totalBonded && expansionAmount) {
     if (epoch <= 72) {
@@ -157,9 +162,9 @@ function Wallet({ user }: { user: string }) {
 
       const daoYield = (qsdToAdd / totalQSD) * 100;
 
-      daoHourlyYield = Intl.NumberFormat().format(daoYield / 4) + '%';
-      daoDailyYield = Intl.NumberFormat().format(daoYield * 6) + '%';
-      daoWeeklyYield = Intl.NumberFormat().format(daoYield * 6 * 7) + '%';
+      daoHourlyYield = numberFormat.format(daoYield / 4) + '%';
+      daoDailyYield = numberFormat.format(daoYield * 6) + '%';
+      daoWeeklyYield = numberFormat.format(daoYield * 6 * 7) + '%';
     } else {
       daoWeeklyYield = '0%';
       daoHourlyYield = '0%';
