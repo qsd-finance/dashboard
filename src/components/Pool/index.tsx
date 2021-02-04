@@ -193,6 +193,7 @@ function Pool({ user }: { user: string }) {
   let lpHourlyAPR = '...';
   let lpDailyAPR = '...';
   let lpWeeklyAPR = '...';
+  let lpMonthlyAPR = '...';
 
   // Define number formatting
   var options = { minimumFractionDigits: 0,
@@ -208,6 +209,7 @@ function Pool({ user }: { user: string }) {
     lpHourlyAPR = numberFormat.format(lpYield / 4) + '%';
     lpDailyAPR = numberFormat.format(lpYield * 6) + '%';
     lpWeeklyAPR = numberFormat.format(lpYield * 6 * 7) + '%';
+    lpMonthlyAPR = numberFormat.format(lpYield * 6 * 30) + '%';
   }
 
   return (
@@ -217,6 +219,7 @@ function Pool({ user }: { user: string }) {
           hourly: lpHourlyAPR,
           daily: lpDailyAPR,
           weekly: lpWeeklyAPR,
+          monthly: lpMonthlyAPR
         }}
         bodyInstructions={
           <p>

@@ -32,7 +32,7 @@ export const Tile: React.FC<TileProps> = ({
     >
       {children || (
         <>
-          <div style={{ fontSize: 20, opacity: 0.6, marginBottom: 16 }}>
+          <div style={{ fontSize: 20, opacity: 0.6, marginBottom: 16, overflowWrap: "break-word" }}>
             {line1}
           </div>
 
@@ -43,13 +43,14 @@ export const Tile: React.FC<TileProps> = ({
                 fontWeight: 400,
                 lineHeight: 1.5,
                 fontFamily: 'aragon-ui-monospace, monospace',
+                overflow: "auto"
               }}
             >
               {line2}
             </div>
           )}
 
-          {line3 && <div style={{ marginTop: 16, fontSize: 16 }}>{line3}</div>}
+          {line3 && <div style={{ marginTop: 16, fontSize: 16, overflowWrap: "break-word" }}>{line3}</div>}
         </>
       )}
     </div>

@@ -148,6 +148,7 @@ function Wallet({ user }: { user: string }) {
   let daoWeeklyYield = '...';
   let daoHourlyYield = '...';
   let daoDailyYield = '...';
+  let daoMonthlyYield = '...';
 
   // Define number formatting
   var options = { minimumFractionDigits: 0,
@@ -165,10 +166,12 @@ function Wallet({ user }: { user: string }) {
       daoHourlyYield = numberFormat.format(daoYield / 4) + '%';
       daoDailyYield = numberFormat.format(daoYield * 6) + '%';
       daoWeeklyYield = numberFormat.format(daoYield * 6 * 7) + '%';
+      daoMonthlyYield = numberFormat.format(daoYield * 6 * 30) + '%';
     } else {
       daoWeeklyYield = '0%';
       daoHourlyYield = '0%';
       daoDailyYield = '0%';
+      daoMonthlyYield = '0%';
     }
   }
 
@@ -179,6 +182,7 @@ function Wallet({ user }: { user: string }) {
           hourly: daoHourlyYield,
           daily: daoDailyYield,
           weekly: daoWeeklyYield,
+          monthly: daoMonthlyYield
         }}
         bodyInstructions={
           <p>

@@ -7,6 +7,7 @@ interface GuideProps {
     hourly: any;
     daily: any;
     weekly: any;
+    monthly: any;
   };
   bodyInstructions: React.ReactNode;
 }
@@ -29,9 +30,10 @@ export const Guide: React.FC<GuideProps> = ({ aprs, bodyInstructions }) => (
           line1='APR'
           line2={
             <div style={{ fontSize: 24 }}>
-              <div>Hourly: {aprs.hourly}</div>
+              {/* <div>Hourly: {aprs.hourly}</div> */}
               <div>Daily: {aprs.daily}</div>
               <div>Weekly: {aprs.weekly}</div>
+              <div>Monthly: {aprs.monthly}</div>
             </div>
           }
         />

@@ -8,8 +8,10 @@ import {
   getTokenTotalSupply
 } from "../../utils/infura";
 import {QSD, QSDS, UNI} from "../../constants/tokens";
-import {formatBN, toTokenUnitsBN} from "../../utils/number";
+import { toTokenUnitsBN} from "../../utils/number";
 import {getPoolBondingAddress} from "../../utils/pool";
+import { formatBN } from '../../utils/number';
+
 
 type TotalBalanceProps = {
   user: string,
@@ -85,9 +87,10 @@ function TotalBalance({ user }: TotalBalanceProps) {
   }, [user]);
 
   return (
-    <div style={{ fontSize: 14, padding: 3, fontWeight: 400, lineHeight: 1.5, fontFamily: 'aragon-ui-monospace, monospace'}}>
+    <div style={{ fontSize: 14, padding: 3, fontWeight: 400, lineHeight: 1.5, fontFamily: 'aragon-ui-monospace, monospace', display : "none"}}>
       ${formatBN(totalBalance, 2)}
     </div>
+    
   );
 }
 

@@ -384,9 +384,13 @@ function Tools({ user }: { user: string }) {
   }
 
   if (qsdPrice && totalSupply) {
-    qsdMarketCap = Intl.NumberFormat().format(
-      toFloat(qsdPrice) * toFloat(totalSupply)
-    );
+    
+    let qsdMarketCapNumber = 0;
+    
+    qsdMarketCapNumber = toFloat(qsdPrice) * toFloat(totalSupply);
+
+    qsdMarketCap = numberFormat.format(qsdMarketCapNumber);
+
   }
 
   const BorderedSection: React.FC<SectionProps> = (props) => (
@@ -450,7 +454,7 @@ function Tools({ user }: { user: string }) {
           </InfoBox>
           <InfoBox title='Total Supply'>
             {totalSupply
-              ? Intl.NumberFormat().format(toFloat(totalSupply)) + ' QSD'
+              ? numberFormat.format(toFloat(totalSupply)) + ' QSD'
               : '...'}
           </InfoBox>
 

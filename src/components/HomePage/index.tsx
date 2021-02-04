@@ -96,12 +96,14 @@ function HomePage({ user }: HomePageProps) {
   }, [user]);
 
   let daoWeeklyYield = '...';
-  let daoHourlyYield = '...';
+  //let daoHourlyYield = '...';
   let daoDailyYield = '...';
+  let daoMonthlyYield = '...';
 
   let lpWeeklyYield = '...';
-  let lpHourlyYield = '...';
+  //let lpHourlyYield = '...';
   let lpDailyYield = '...';
+  let lpMonthlyYield = '...';
 
   // Define number formatting
   var options = { minimumFractionDigits: 0,
@@ -115,9 +117,10 @@ function HomePage({ user }: HomePageProps) {
 
     const lpYield = (daiToAdd / totalDAI) * 100;
 
-    lpHourlyYield = numberFormat.format(lpYield / 4) + '%';
+    //lpHourlyYield = numberFormat.format(lpYield / 4) + '%';
     lpDailyYield = numberFormat.format(lpYield * 6) + '%';
     lpWeeklyYield = numberFormat.format(lpYield * 6 * 7) + '%';
+    lpMonthlyYield = numberFormat.format(lpYield * 6 * 30) +'%';
   }
 
   // Calculate DAO APR (4 hrs)
@@ -127,9 +130,10 @@ function HomePage({ user }: HomePageProps) {
 
     const daoYield = (qsdToAdd / totalQSD) * 100;
 
-    daoHourlyYield = numberFormat.format(daoYield / 4) + '%';
+    //daoHourlyYield = numberFormat.format(daoYield / 4) + '%';
     daoDailyYield = numberFormat.format(daoYield * 6) + '%';
     daoWeeklyYield = numberFormat.format(daoYield * 6 * 7) + '%';
+    daoMonthlyYield = numberFormat.format(daoYield * 6 * 30) + '%';
   }
 
   const curEpoch = Number(epochTime.split('-')[0]);
@@ -190,7 +194,7 @@ function HomePage({ user }: HomePageProps) {
               }
             />
             <TopBorderBox
-              title='QSD Info'
+              title='QSD in LP pool'
               body={qsdLiquidity ? formatBN(qsdLiquidity, 2) + ' QSD' : '...'}
               action={
                 <Button>
@@ -234,9 +238,9 @@ function HomePage({ user }: HomePageProps) {
               title='Bonded QSD APR'
               body={
                 <>
-                  <div>QSD Hourly: {daoHourlyYield} </div>
                   <div>QSD Daily: {daoDailyYield} </div>
                   <div>QSD Weekly: {daoWeeklyYield} </div>
+                  <div>QSD Monthly: {daoMonthlyYield} </div>
                 </>
               }
               action={
@@ -253,9 +257,9 @@ function HomePage({ user }: HomePageProps) {
               title='Bonded LP APR'
               body={
                 <>
-                  <div>LP Hourly: {lpHourlyYield} </div>
                   <div>LP Daily: {lpDailyYield} </div>
                   <div>LP Weekly: {lpWeeklyYield} </div>
+                  <div>LP Monthly: {lpMonthlyYield} </div>
                 </>
               }
               action={

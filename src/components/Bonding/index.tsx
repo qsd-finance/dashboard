@@ -176,6 +176,7 @@ function Bonding({ user }: { user: string }) {
   let bondingWeeklyYield = '...';
   let bondingHourlyYield = '...';
   let bondingDailyYield = '...';
+  let bondingMonthlyYield = '...';
 
   // Define number formatting
   var options = { minimumFractionDigits: 0,
@@ -193,10 +194,12 @@ function Bonding({ user }: { user: string }) {
       bondingHourlyYield = numberFormat.format(daoYield / 4) + '%';
       bondingDailyYield = numberFormat.format(daoYield * 6) + '%';
       bondingWeeklyYield = numberFormat.format(daoYield * 6 * 7) + '%';
+      bondingMonthlyYield = numberFormat.format(daoYield * 6 * 30) + '%';
     } else {
       bondingHourlyYield = '0%';
       bondingDailyYield = '0%';
       bondingWeeklyYield = '0%';
+      bondingMonthlyYield = '0%';
     }
   }
 
@@ -214,6 +217,7 @@ function Bonding({ user }: { user: string }) {
           hourly: bondingHourlyYield,
           daily: bondingDailyYield,
           weekly: bondingWeeklyYield,
+          monthly: bondingMonthlyYield
         }}
         bodyInstructions={
             <p>
