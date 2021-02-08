@@ -1,8 +1,9 @@
 import { Button } from '@aragon/ui';
 import React, { ComponentProps, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Layout } from '@aragon/ui';
-import { IconHeader, Row, Tile, TopBorderBox } from '../common';
+//Commented By RDN
+// import { Layout } from '@aragon/ui';
+import { IconHeader, Row, Tile, TopBorderBox , BRow, BCol , BContainer } from '../common';
 import Regulation from '../Regulation';
 import { QSD, QSDS } from '../../constants/tokens';
 import {
@@ -139,15 +140,23 @@ function HomePage({ user }: HomePageProps) {
   const curEpoch = Number(epochTime.split('-')[0]);
 
   return (
-    <Layout>
+    <BContainer>
+      {/*Commented By RDN*/}
+    {/* <Layout> */}
       <div style={{ margin: '60px 0' }}>
-        <Row>
-          <Tile
+        
+        <BRow >
+        <BCol  lg={4}  md={12} sm={12}  >
+        <Tile
+            style={{height : '200px'}}
             line1='Epoch'
             line2={epochTime}
             line3={`Advance -> ${curEpoch + 1}`}
           />
-          <Tile
+        </BCol>
+         <BCol   lg={4}  md={12} sm={12}>
+         <Tile
+            style={{height : '200px'}}
             line1='Total Supply'
             line2={totalSupply === null ? '...' : formatBN(totalSupply, 2)}
             line3={`${
@@ -160,7 +169,10 @@ function HomePage({ user }: HomePageProps) {
                 : 'Idle phase'
             }`}
           />
-          <Tile
+         </BCol>
+         <BCol   lg={4}  md={12} sm={12}>
+         <Tile
+            style={{height : '200px'}}
             line1='Market Cap'
             line2={`${
               totalSupply !== null && qsdPrice !== null
@@ -169,7 +181,10 @@ function HomePage({ user }: HomePageProps) {
             }`}
             line3=''
           />
-        </Row>
+         </BCol>
+          
+        </BRow>
+        {/* </BContainer> */}
 
         <Section>
           <IconHeader
@@ -284,7 +299,10 @@ function HomePage({ user }: HomePageProps) {
           </div>
         </Section>
       </div>
-    </Layout>
+      {/*Commented By RDN*/}
+      {/* </Layout> */}
+      </BContainer>
+      
   );
 }
 

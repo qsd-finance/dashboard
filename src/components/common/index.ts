@@ -21,6 +21,9 @@ export { WithdrawDeposit } from './WithdrawDeposit';
 export { BondUnbond } from './BondUnbond';
 export { Claim } from './Claim';
 export { Guide } from './Guide';
+export { Row as BRow } from 'react-bootstrap';
+export { Col as BCol} from 'react-bootstrap';
+export { Container as BContainer} from 'react-bootstrap';
 export {
   AddressBlock,
   BalanceBlock,
