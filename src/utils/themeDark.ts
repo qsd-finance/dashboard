@@ -15,7 +15,9 @@ export const themeDark = {
   content: '#FFFFFF',
   contentSecondary: '#7c99d6',
 
-  surface: '#35425e',
+  //HACK: Commented By RDN
+ // surface: '#35425e',
+  surface: C.SurfacePlus,
   surfaceContent: '#FFFFFF',
   surfaceContentSecondary: '#7c99d6',
   surfaceIcon: '#6683c3',
