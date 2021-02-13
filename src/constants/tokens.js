@@ -1,4 +1,4 @@
-import { UniV2PairAddress, GovernanceToken, Dao, Dollar } from './contracts';
+import { UniV2PairAddress, GovernanceToken, PoolBonding, Dollar } from './contracts';
 
 export const UNI = {
   addr: UniV2PairAddress,
@@ -19,7 +19,7 @@ export const QSD = {
 };
 
 export const QSDS = {
-  addr: Dao,
+  addr: PoolBonding,
   decimals: 18,
   symbol: 'QSDS',
 };
