@@ -27,5 +27,3 @@ yarn-error.log*
 
 .idea
 .vercel
-
-yarn.lock

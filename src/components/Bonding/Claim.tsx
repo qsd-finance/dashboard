@@ -41,7 +41,7 @@ export const Claim: React.FC<ClaimProps> = ({
     </div>
     <div style={{ width: '100%', paddingTop: '2%', textAlign: 'center' }}>
       <span style={{ opacity: 0.5 }}>
-        {/* Unbond to make rewards claimable after your status is Unlocked */}
+        Unbond to make rewards claimable after your status is Unlocked
       </span>
     </div>
   </TopBorderSection>

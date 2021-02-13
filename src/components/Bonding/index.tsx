@@ -221,7 +221,10 @@ function Bonding({ user }: { user: string }) {
         }}
         bodyInstructions={
             <p>
+              <p style={{ color: 'red' }}>            
+              <b><u>WARNING:</u> Rewards in this section are only available post-bootstrapping, please do not stage/bond in this section until epoch 73</b></p>
 
+            <br />
             Step 1: Stage your QSD
             <br />
             Step 2: Bond your QSD *Note that you can only bond QSD when TWAP is
