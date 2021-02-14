@@ -120,6 +120,7 @@ function Bonding({ user }: { user: string }) {
         qsgRewardedStr,
         qsdClaimableStr,
         qsgClaimableStr,
+        qsdsBalance,
       ] = await Promise.all([
         getPoolTotalBonded(poolAddress),
         getTokenBalance(QSD.addr, user),
@@ -132,6 +133,7 @@ function Bonding({ user }: { user: string }) {
         getPoolBalanceOfRewarded2(poolAddress, user),
         getPoolBalanceOfClaimable1(poolAddress, user),
         getPoolBalanceOfClaimable2(poolAddress, user),
+        getTokenBalance(QSDS.addr, user),
       ]);
 
       const qsdRewarded = toTokenUnitsBN(qsdRewardedStr, QSD.decimals);
@@ -140,6 +142,7 @@ function Bonding({ user }: { user: string }) {
       const qsgClaimable = toTokenUnitsBN(qsgClaimableStr, QSG.decimals);
       const poolTotalBonded = toTokenUnitsBN(poolTotalBondedStr, QSD.decimals);
       const userQSDBalance = toTokenUnitsBN(qsdBalance, QSD.decimals);
+      const userQSDSBalance = toTokenUnitsBN(qsdsBalance, QSD.decimals);
       const userStagedBalance = toTokenUnitsBN(stagedBalance, QSDS.decimals);
       const userBondedBalance = toTokenUnitsBN(bondedBalance, QSDS.decimals);
       const userStatus = parseInt(status, 10);
