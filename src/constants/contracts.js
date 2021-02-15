@@ -3,6 +3,7 @@
 export const UniswapV2Router02 = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D';
 
 export const Dao = '0xEc9dCB3DC47FF5edc02666cE4Db459841853B7B4';
+// export const Dao = '0xCd72c0A874782d7D5c85208c1bbAE46c409478dd';
 export const PoolBonding = '0xCd72c0A874782d7D5c85208c1bbAE46c409478dd';
 export const PoolLP = '0xDBAf2265C74AD30a90B08D14E8097D13B891a2cF';
 export const PoolGov = '0xD9122DB4cB0E1c42dA965Ee5D25606C7ef607145';

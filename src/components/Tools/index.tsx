@@ -2,7 +2,7 @@ import { Button, Layout, useTheme } from '@aragon/ui';
 import BigNumber from 'bignumber.js';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { TreasuryAddress } from '../../constants/contracts';
+import { PoolBonding, TreasuryAddress } from '../../constants/contracts';
 import { QSD, QSDS, UNI } from '../../constants/tokens';
 import { epochformattedRemaining } from '../../utils/calculation';
 import {
@@ -183,8 +183,8 @@ function Tools({ user }: { user: string }) {
         getTokenBalance(UNI.addr, user),
         getPoolBalanceOfBonded(poolLP, user),
         getPoolBalanceOfStaged(poolLP, user),
-        getBalanceBonded(QSDS.addr, user),
-        getBalanceOfStaged(QSDS.addr, user),
+        getBalanceBonded(PoolBonding, user),
+        getBalanceOfStaged(PoolBonding, user),
         getUserLPWallet(user),
         getUserLPStaged(user),
         getUserLPBonded(user),
