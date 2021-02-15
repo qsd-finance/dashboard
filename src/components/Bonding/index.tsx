@@ -142,7 +142,7 @@ function Bonding({ user }: { user: string }) {
       const qsgClaimable = toTokenUnitsBN(qsgClaimableStr, QSG.decimals);
       const poolTotalBonded = toTokenUnitsBN(poolTotalBondedStr, QSD.decimals);
       const userQSDBalance = toTokenUnitsBN(qsdBalance, QSD.decimals);
-      const userQSDSBalance = toTokenUnitsBN(qsdsBalance, QSD.decimals);
+      const userQSDSBalance = qsdsBalance;
       const userStagedBalance = toTokenUnitsBN(stagedBalance, QSDS.decimals);
       const userBondedBalance = toTokenUnitsBN(bondedBalance, QSDS.decimals);
       const userStatus = parseInt(status, 10);
