@@ -186,8 +186,9 @@ function Wallet({ user }: { user: string }) {
         }}
         bodyInstructions={
           <p>
-            Note: Rewards are only applicable during bootstrapping phase i.e.
-            the first 72 epochs
+              <p style={{ color: 'red' }}>            
+              <b><u>WARNING: </u>Bootstrapping period has ended. Please remove any remaining QSD from this section</b></p>
+
             <br />
             <br />
             Step 1: Stage your QSD
